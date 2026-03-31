@@ -1,18 +1,30 @@
 # EdgeECG
 
-This repository provides the implementation of the proposed EdgeECG for arrhythmia classification, including Python code, C implementation, and STM32 deployment.
+This repository provides the official implementation of **EdgeECG** for arrhythmia classification on resource-constrained edge devices.
 
+The repository includes:
+
+- Python scripts for data preparation and deployment file generation
+- C implementation for PC-side inference validation
+- STM32 deployment project for embedded inference
+
+---
 
 ## Repository Structure
 
-- `EdgeECG/Python_Implementation/`  
-  Training and evaluation code for the proposed model.
+- `Python_Implementation/`  
+  Python scripts for preprocessing, dataset generation, and export of model-related text files.
 
-- `EdgeECG/C_Implementation/`  
-  C-based implementation for neural network inference, including:
-  - model definition  
-  - trained weights  
-  - example inference entry  
+- `C_Implementation/`  
+  C implementation for PC-side validation of the inference pipeline, including:
+  - parameter loading from txt files
+  - test input loading
+  - classification result verification
 
-- `EdgeECG/STM32_Project/`  
-  Deployment example on STM32F103ZET6 microcontrollers.
+- `STM32_Project/`  
+  Embedded deployment project targeting **STM32F103ZET6**, including:
+  - FATFS / SD card support
+  - model parameter loading from txt files
+  - single-sample ECG inference
+
+---
