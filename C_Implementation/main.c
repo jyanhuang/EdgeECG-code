@@ -17,7 +17,7 @@
 #define WEIGHT_SCALE         256
 #define MAX_LINE_LENGTH      4096
 
-/* ===== 运行时从 txt 读取 ===== */
+/* ===== read from .txt files ===== */
 static int conv1_weight[24];
 static int conv1_bias[8];
 
@@ -38,7 +38,6 @@ static int fc1_bias[16];
 static int fc2_weight[80];
 static int fc2_bias[5];
 
-/* ===== 中间缓冲 ===== */
 static float buf_conv1[CONV1_OUT_CH * INPUT_LEN];
 static float buf_conv2[CONV1_OUT_CH * INPUT_LEN];
 static float buf_conv3[INPUT_LEN];
@@ -50,7 +49,6 @@ static float buf_fc2[FC2_OUT];
 static float partial_in[UNTOUCHED_CH * PARTIAL_LEN];
 static float partial_out[UNTOUCHED_CH * PARTIAL_LEN];
 
-/* ===== 读取 ECG csv：逗号分隔 ===== */
 void readCSV(const char* filename, float* array, int n)
 {
     FILE* file = fopen(filename, "r");
@@ -74,7 +72,6 @@ void readCSV(const char* filename, float* array, int n)
     fclose(file);
 }
 
-/* ===== 读取标签 csv：逗号分隔 ===== */
 void readLabelCSV(const char* filename, float* array, int n)
 {
     FILE* file = fopen(filename, "r");
@@ -98,7 +95,6 @@ void readLabelCSV(const char* filename, float* array, int n)
     fclose(file);
 }
 
-/* ===== 读取权重 txt：每行一个整数，兼容旧工程风格 ===== */
 void readTXTInt(const char* filename, int* array, int n)
 {
     FILE* file = fopen(filename, "r");
@@ -398,10 +394,8 @@ int main(void)
         return -1;
     }
 
-    /* 先加载模型参数 txt */
     load_model_weights();
 
-    /* 再读取测试集 */
     readCSV("./X_test_np.txt", ECGsignal, 300 * totalnum);
     readLabelCSV("./Y_test_np.txt", labels, totalnum);
 
