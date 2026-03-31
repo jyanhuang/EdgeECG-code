@@ -16,8 +16,6 @@ This folder includes:
   Compressed ECG test input file
 - `Y_test_np.zip`  
   Label file for the test set
-- `Results.png`  
-  Example validation result
 - `README.md`
 
 ### Important note
