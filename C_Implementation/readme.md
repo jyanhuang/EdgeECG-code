@@ -14,7 +14,7 @@ This folder includes:
   Folder containing model parameter text files
 - `X_test_np.zip`  
   Compressed ECG test input file
-- `Y_test_np.txt`  
+- `Y_test_np.zip`  
   Label file for the test set
 - `Results.png`  
   Example validation result
@@ -25,11 +25,11 @@ This folder includes:
 Please unzip:
 
 ```text
-X_test_np.zip
+X_test_np.zip, Y_test_np.zip
 ```
 to obtain:
 ```text
-X_test_np.txt
+X_test_np.txt, Y_test_np.txt
 ```
 before running the program.
 
