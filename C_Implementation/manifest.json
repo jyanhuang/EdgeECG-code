@@ -1,0 +1,61 @@
+{
+  "WEIGHT_SCALE": 256,
+  "files": [
+    {
+      "name": "conv1_weight",
+      "count": 24
+    },
+    {
+      "name": "conv1_bias",
+      "count": 8
+    },
+    {
+      "name": "conv2_partial_conv_weight",
+      "count": 12
+    },
+    {
+      "name": "conv2_channel_conv_weight",
+      "count": 108
+    },
+    {
+      "name": "conv3_weight",
+      "count": 24
+    },
+    {
+      "name": "conv3_bias",
+      "count": 1
+    },
+    {
+      "name": "bn_weight",
+      "count": 1
+    },
+    {
+      "name": "bn_bias",
+      "count": 1
+    },
+    {
+      "name": "bn_running_mean",
+      "count": 1
+    },
+    {
+      "name": "bn_running_var",
+      "count": 1
+    },
+    {
+      "name": "fc1_weight",
+      "count": 2400
+    },
+    {
+      "name": "fc1_bias",
+      "count": 16
+    },
+    {
+      "name": "fc2_weight",
+      "count": 80
+    },
+    {
+      "name": "fc2_bias",
+      "count": 5
+    }
+  ]
+}
