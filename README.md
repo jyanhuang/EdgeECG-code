@@ -22,9 +22,5 @@ The repository includes:
   - classification result verification
 
 - `STM32_Project/`  
-  Embedded deployment project targeting **STM32F103ZET6**, including:
-  - FATFS / SD card support
-  - model parameter loading from txt files
-  - single-sample ECG inference
-
+  Embedded deployment project targeting **STM32F103ZET6**.
 ---
