@@ -12,7 +12,6 @@ This repository contains the implementation of EdgeECG for ECG classification on
 ├── model.py             # Model definition
 ├── DCP.py               # DCP module
 ├── ecg_data/mit-bih/    # Place the MIT-BIH dataset here
-├── checkpoints/         # Saved model checkpoints
 └── logs/                # Training logs
 ```
 
