@@ -39,8 +39,8 @@ class Model(nn.Module):
         super().__init__()
 
         self.conv1 = nn.Conv1d(in_channels=1, out_channels=8, kernel_size=3, stride=1, padding=1)
-        # self.conv2 = Partial_conv(8, 4)
-        self.conv2 = nn.Identity()
+        self.conv2 = Partial_conv(8, 4)
+        # self.conv2 = nn.Identity()
         self.conv3 = nn.Conv1d(in_channels=8, out_channels=1, kernel_size=3, stride=1, padding=1)
         self.pool1 = nn.MaxPool1d(kernel_size=3, stride=2, padding=1)
         self.BN = nn.BatchNorm1d(1)
